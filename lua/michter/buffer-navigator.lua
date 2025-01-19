@@ -2,12 +2,6 @@
 vim.o.showtabline = 2 -- Always show the tabline
 vim.o.tabline = "%!v:lua.Tabline()"
 
-vim.cmd([[
-highlight TabLine guibg=#282c34 guifg=#abb2bf
-highlight TabLineSel guibg=#61afef guifg=#282c34
-highlight TabLineFill guibg=#1e222a guifg=#1e222a
-]])
-
 function _G.Tabline()
     local s = ""
     local current = vim.fn.bufnr('%') -- Current buffer number
